@@ -56,3 +56,4 @@ The backend should now be running.
 
 Enjoy building!
 
+![image](https://github.com/user-attachments/assets/14f98ba4-42ff-4c2b-9865-7684c1007e3d)
