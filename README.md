@@ -1,17 +1,58 @@
-#how to run this project
-*go to backend ,type "npm install" to install all dependencies , create .env in backend folder , paste the DATABASE_URL (postgreSQL connection string), use this string to generate your own prisma accelerate string , paste this accelerate string to wrangler.toml
+# How to Run This Project
 
+## Backend Setup
+1. Navigate to the `backend` directory.
+2. Install all dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the `backend` folder and paste your PostgreSQL connection string as `DATABASE_URL`.
+4. Generate your Prisma Accelerate connection string from the PostgreSQL connection string and paste it into `wrangler.toml`.
 
+5. Initialize the database schema:
+   ```bash
+   npx prisma migrate dev
+   ```
+6. Generate the Prisma client:
+   ```bash
+   npx prisma generate --no-engine
+   ```
+7. Install dependencies again to ensure everything is bootstrapped:
+   ```bash
+   npm install
+   ```
+8. Run the backend:
+   ```bash
+   npm run dev
+   ```
 
+The backend should now be running.
 
-*after db is initiated , type "npx prisma migrate dev" to migrate your schema to posthres db
-*type "npx prisma generate --no-engine" to generate the prisma client
-*type "npm install" again to bootstrap everything
-*run the backend using "npm run dev" ![image](https://github.com/user-attachments/assets/e5848b45-7354-452b-9765-9c09d77c4320)
+---
 
-backend is up and running 
+## Frontend Setup
+1. Open a new terminal.
+2. Navigate to the `frontend` directory.
+3. Install all dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the frontend:
+   ```bash
+   npm run dev
+   ```
 
+---
 
-*switch to other terminal , go to frontend folder , "npm install" to install all dependencies
-*then type"npm run dev" ![image](https://github.com/user-attachments/assets/91efa93f-698e-412d-aa20-b9c537c4a454)
-both are running on different ports , access backend via frontend.
+## Accessing the Application
+- The backend and frontend will be running on different ports.
+- Use the frontend to interact with the backend services.
+
+---
+
+### Notes
+- Ensure you have your PostgreSQL database set up before running the Prisma commands.
+- Replace the placeholder strings with your actual connection and configuration details in `.env` and `wrangler.toml`.
+
+Enjoy building!
+
